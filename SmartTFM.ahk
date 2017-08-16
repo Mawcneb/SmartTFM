@@ -13,7 +13,7 @@
 
 
 ; If Transformice window doesn't exists
-If(!WinExist("Transformice") && !WinExist("Transformice ! » - Google Chrome"))
+If(!WinExist("Transformice") && !WinExist("Transformice ! » - Google Chrome") && !WinExist("Transformice ! » – Opera"))
 {
 	; Display message about error
 	MsgBox("Error #1 - Transformice hasn't been detected!", "SmartTFM", "Icon!")
@@ -23,7 +23,7 @@ If(!WinExist("Transformice") && !WinExist("Transformice ! » - Google Chrome"))
 
 ; #If WinActive makes hotkeys working only for specified applications
 ; and only when that window is on the top
-#If WinActive("Transformice") || WinActive("Transformice ! » - Google Chrome")
+#If WinActive("Transformice") || WinActive("Transformice ! » - Google Chrome") || WinActive("Transformice ! » – Opera")
 ; Shift + F
 +f::
 	; There are more effective ways to make it work
