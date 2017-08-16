@@ -13,7 +13,7 @@
 
 
 ; If Transformice window doesn't exists
-If(!WinExist("Transformice"))
+If(!WinExist("Transformice") && !WinExist("Transformice ! » - Google Chrome"))
 {
 	; Display message about error
 	MsgBox("Error #1 - Transformice hasn't been detected!", "SmartTFM", "Icon!")
@@ -21,9 +21,9 @@ If(!WinExist("Transformice"))
 	ExitApp()
 }
 
-; #IfWinActive makes hotkeys working only for specified applications
+; #If WinActive makes hotkeys working only for specified applications
 ; and only when that window is on the top
-#IfWinActive ahk_exe Transformice.exe
+#If WinActive("Transformice") || WinActive("Transformice ! » - Google Chrome")
 ; Shift + F
 +f::
 	; There are more effective ways to make it work
